@@ -95,6 +95,7 @@ const app = Vue.createApp({
     *  nextをtrueにして次のステージを表示します。
     */
     nextStage(stage) {
+      console.log('ボタン');
       this.clear[stage] = false;
       this.next[stage] = true;
     },
