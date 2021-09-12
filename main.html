@@ -41,7 +41,7 @@
   
             <div class="container">
               <figure class="image__container">
-                <img src="assets/images/stage.png" alt="">
+                <img src="assets/images/stage1.png" alt="">
               </figure>
                 
  <!--  YouTube貼り付け
@@ -60,7 +60,7 @@ Youtube貼り付けここまで -->
         <!-- STAGE1解答入力セクション　ここから -->
         <section class="section bg-color--keycolor">
           <div class="container">
-            <h2 class="section-title"><span class="section-title__stage">STAGE：1</span>キーワードを入力</h2>
+            <h2 class="section-title"><span class="section-title__stage">STAGE：1</span>キーワードを半角英数字で入力</h2>
             <!------------------------------------------------------------------------------------------------------------
               解答入力欄のコンポーネントです。入力欄・送信ボタン・エラーメッセージを表示します。
               v-bind:correct="correctAnswer['stage1']['q1']" は正解の解答を指します。
@@ -112,7 +112,12 @@ Youtube貼り付けここまで -->
                 しかし、部屋の中は暗くて何も見えない<br>
                困っていると、何やら小さなメモが落ちていることに気がついた。 </p>
             </div>
-          </div>
+          </div> 
+          <!-- STAGE2-1問題セクション　ここから -->
+          <figure class="image__container">
+          <img src="assets/images/stage.png" alt="">
+          </figure>
+          <!-- STAGE2-1問題セクション　ここまで -->
           <div class="stage-column__container section bg-color--keycolor">
             <div class="container">
               <h2 class="section-title"><span class="section-title__stage">STAGE：2</span>キーワードを入力</h2>
@@ -129,11 +134,7 @@ Youtube貼り付けここまで -->
 
                 <!-- STAGE2-1　ここから -->
                 <div class="column">
-                  <!-- STAGE2-1問題セクション　ここから -->
-                  <figure class="image__container">
-                    <img src="assets/images/stage.png" alt="">
-                  </figure>
-                  <!-- STAGE2-1問題セクション　ここまで -->
+                 
                   <!-- STAGE2-1解答入力セクション　ここから -->
                   <answer-input v-bind:correct="correctAnswer['stage2']['q1']" v-on:answer-input="answerInput($event, 'stage2', 1)"></answer-input>
                   <a class="link-hint" href="hint2.html" target="hint2">ヒントをみる ></a>
