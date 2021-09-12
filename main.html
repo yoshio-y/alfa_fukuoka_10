@@ -220,7 +220,7 @@ Youtube貼り付けここまで -->
               v-on:answer-input="answerInput($event, 'stage3', 1, 'final')" は送信ボタンをクリックした時の動作を決める関数です。
               4番目の引数 'final' は最終ステージを表します。
             ------------------------------------------------------------------------------------------------------------------>
-            <answer-input v-bind:correct="correctAnswer['stage3']['q1']" v-on:answer-input="answerInput($event, 'stage3', 1)"></answer-input>
+            <answer-input v-bind:correct="correctAnswer['stage3']['q1']" v-on:answer-input="answerInput($event, 'stage3', 1,'final')"></answer-input>
             <a class="link-hint" href="hint3.html" target="hint3">ヒントをみる ></a>
           </div>
         </section>
@@ -268,65 +268,11 @@ STAGE3-2追加ここまで -->
         </section>
 
 STAGE3-3追加　ここまで -->
-         <!-- STAGE３クリア画面　ここから -->
-        <section v-if="clear['stage3']" v-bind:class="{isClear:clear['stage3']}"  class="section section--clear bg-color--gray">
-          <div class="container">
-            <div class="clear-message">
-              <div class="clear-message__title">STAGE：3　クリア！</div>
-              <div class="clear-message__content">金庫の扉を開けることができた！<br>
-                中には五万円入っていた！これでゲームが帰るぞ！</div>
-                <button v-on:click="nextStage('stage３')" onclick="location.href='#sectionStage4'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
-            </div>
-          </div>
-        </section>
-        <!-- STAGE３クリア画面　ここまで -->
-
+         
           
       </div>
       <!-- STAGE3　ここまで -->
-      <!-- STAGE4　ここから -->
-      <div v-if="next['stage3']" id="sectionStage4" class="stage">
-        <section>
-          <div class="section">
-            <div class="container">
-              <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：4</span>玄関から外に出ろ！</h2>
-              <p class="text-center">ゲームを買うお金を手に入れ、外に出ようとしたら<br>
-              玄関の扉が開かない、どうやら俺が引きこもっている間<br>
-              両親が最新のクロスワード式の玄関扉に改築していようだ。<br>
-              このクロスワードパズルを解かなければいけないらしい...</p>
-           <!-- STAGE4問題セクション　ここから -->
-          <figure class="image__container">
-          <img src="assets/images/stage2.png" alt="">
-          </figure>
-          <!-- STAGE4問題セクション　ここまで -->
-            </div>
-          </div> 
-                  <!-- STAGE4解答入力セクション　ここから -->
-               <section class="section bg-color--keycolor">
-          <div class="container">
-            <h2 class="section-title"><span class="section-title__stage">STAGE：4</span>答えを入力</h2>
-            <!------------------------------------------------------------------------------------------------------------
-              解答入力欄のコンポーネントです。入力欄・送信ボタン・エラーメッセージを表示します。
-              v-bind:correct="correctAnswer['stage1']['q1']" は正解の解答を指します。
-              v-on:answer-input="answerInput($event, 'stage1', 1)" は送信ボタンをクリックした時の動作を決める関数です。
-              2番目、3番目の1引数 'stage1', 1 はstage1の1問目ということになります。
-              1番麺の引数 $event は正解、不正解の判定を受け取る変数です。
-              []、()の間違い、''の抜けがあると動きません。
-            ------------------------------------------------------------------------------------------------------------>
-            <answer-input v-bind:correct="correctAnswer['stage4']['q1']" v-on:answer-input="answerInput($event, 'stage4', 1)"></answer-input>
-
-            <a class="link-hint" href="hint4.html" target="hint4">ヒントをみる ></a>
-          </div>
-        </section>
-                  
-                  <!-- STAGE4解答入力セクション　ここまで -->
-            </div>
-          </div>
-        </section>
-      </div> 
-                
-                <!-- STAGE4　ここまで -->
-
+      
     </div>
   </main>
   <footer class="footer section bg-color--gray">
