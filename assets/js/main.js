@@ -32,7 +32,7 @@ const app = Vue.createApp({
         },
         stage4: {
           q1: 'えええ',
-        }
+        },
       },
 
       /* それぞれの問題が正解かどうか
